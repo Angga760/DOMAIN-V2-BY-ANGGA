@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Canggih</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>KALKULATOR BY ANGGA CELEG</h1>
+        <input type="text" id="display" disabled placeholder="0">
+        
+        <div class="buttons">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('/')">/</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('*')">*</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="calculateResult()">=</button>
+            <button onclick="appendToDisplay('+')">+</button>
+        </div>
+
+        <div class="unit-conversion">
+            <h3>Konversi Suhu</h3>
+            <input type="number" id="temperature" placeholder="Suhu (°F)">
+            <button onclick="convertTemperature()">Konversi ke °C</button>
+            <h4 id="converted-temp"></h4>
+
+            <h3>Konversi Panjang</h3>
+            <input type="number" id="length" placeholder="Panjang (meter)">
+            <button onclick="convertLength()">Konversi ke Kilometer</button>
+            <h4 id="converted-length"></h4>
+        </div>
+
+        <div class="history">
+            <h3>Riwayat</h3>
+            <ul id="historyList"></ul>
+            <button onclick="clearHistory()">Hapus Riwayat</button>
+        </div>
+
+        <button id="toggleTheme" onclick="toggleTheme()">Ganti Tema</button>
+    </div>
+
+    <audio id="click-sound" src="click-sound.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
